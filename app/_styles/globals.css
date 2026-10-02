@@ -4,6 +4,16 @@ html {
   font-size: 62.5%;
 }
 
+:root {
+  --color-primary: #e7816b;
+  --color-secondary: #333136;
+}
+
+@theme {
+  --color-primary: #e7816b;
+  --color-secondary: #333136;
+}
+
 .loader {
   width: 8em;
   height: 4em;
@@ -58,4 +68,8 @@ html {
   100% {
     transform: rotate(0);
   }
+}
+
+.com-container {
+  @apply mx-auto w-full max-w-[900px] max-[1250px]:max-w-[950px] px-6 sm:px-10 lg:px-12 xl:px-0;
 }
