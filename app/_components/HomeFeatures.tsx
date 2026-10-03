@@ -5,7 +5,7 @@ import FriendlyImage from "@/public/home/desktop/illustration-friendly.svg";
 
 function HomeFeatures() {
   return (
-    <section className="flex items-center gap-10 mt-60 mb-60 mx-[6rem]">
+    <section className="flex items-center gap-10 mt-60 mx-[6rem]">
       <div className="flex flex-col items-center text-center">
         <Image src={PassionImage} alt="Passionate" quality={100} />
         <p className="text-secondary text-[2rem] font-medium tracking-[0.2em] uppercase mt-10">

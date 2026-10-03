@@ -3,6 +3,8 @@ import AppDesign from "@/public/home/desktop/image-app-design.jpg";
 import GraphicDesign from "@/public/home/desktop/image-graphic-design.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { IonIcon } from "ionicons/components/ion-icon.js";
+import { chevronForwardOutline } from "ionicons/icons";
 
 function HomeProjects() {
   return (
@@ -64,6 +66,7 @@ function HomeProjects() {
             </p>
             <p className="mt-6 text-2xl uppercase tracking-[0.25em]">
               View Projects
+              {/* <IonIcon icon={chevronForwardOutline} /> */}
             </p>
           </div>
         </Link>
