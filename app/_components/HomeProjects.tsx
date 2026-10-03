@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function HomeProjects() {
   return (
-    <section className="com-container mx-[6rem] grid grid-cols-1 gap-6 md:grid-cols-2 mt-20">
+    <section className="com-container mx-[6rem] grid grid-cols-1 gap-6 md:grid-cols-2 mt-60">
       <Link
         href="/web-design"
         className="group relative block overflow-hidden rounded-2xl"
@@ -18,10 +18,10 @@ function HomeProjects() {
           quality={100}
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/25 text-center text-white transition-colors group-hover:bg-primary/75">
-          <p className="text-6xl font-medium uppercase tracking-[0.1em]">
+          <p className="text-[4rem] font-medium uppercase tracking-[0.1em]">
             Web Design
           </p>
-          <p className="mt-4 text-2xl uppercase tracking-[0.25em]">
+          <p className="mt-8 text-2xl uppercase tracking-[0.25em]">
             View Projects
           </p>
         </div>
@@ -39,10 +39,10 @@ function HomeProjects() {
             quality={100}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/25 text-center text-white transition-colors group-hover:bg-primary/75">
-            <p className="text-6xl font-medium uppercase tracking-[0.1em]">
+            <p className="text-[4rem] font-medium uppercase tracking-[0.1em]">
               App Design
             </p>
-            <p className="mt-4 text-2xl uppercase tracking-[0.25em]">
+            <p className="mt-6 text-2xl uppercase tracking-[0.25em]">
               View Projects
             </p>
           </div>
@@ -59,10 +59,10 @@ function HomeProjects() {
             quality={100}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/25 text-center text-white transition-colors group-hover:bg-primary/75">
-            <p className="text-6xl font-medium uppercase tracking-[0.1em]">
+            <p className="text-[4rem] font-medium uppercase tracking-[0.1em]">
               Graphic Design
             </p>
-            <p className="mt-4 text-2xl uppercase tracking-[0.25em]">
+            <p className="mt-6 text-2xl uppercase tracking-[0.25em]">
               View Projects
             </p>
           </div>

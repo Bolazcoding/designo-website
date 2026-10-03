@@ -19,13 +19,13 @@ function HomeHero() {
           Learn More
         </Cta>
       </div>
-      <picture className="flex items-center justify-center">
+      <picture className="flex translate-x-[calc(50%_-_320px)] items-center justify-center">
         <Image
           src={HeroPhone}
           alt="hero phone"
           quality={100}
           className="mb-[-25rem]"
-          height="800"
+          height="840"
           placeholder="blur"
         />
       </picture>
