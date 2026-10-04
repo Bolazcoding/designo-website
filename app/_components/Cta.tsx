@@ -11,7 +11,7 @@ type Props = {
 function Cta({ children, className, linkTo, bgColor, ctaColor }: Props) {
   return (
     <div
-      className={`${className} bg-${bgColor} inline-block py-6.5 px-9.5 rounded-xl`}
+      className={`${className} bg-white inline-block py-6.5 px-9.5 rounded-xl`}
     >
       <Link
         href={linkTo}

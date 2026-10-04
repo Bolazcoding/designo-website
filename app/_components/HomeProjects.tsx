@@ -1,10 +1,12 @@
+"use client";
+
 import WebDesign from "@/public/home/desktop/image-web-design-large.jpg";
 import AppDesign from "@/public/home/desktop/image-app-design.jpg";
 import GraphicDesign from "@/public/home/desktop/image-graphic-design.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { IonIcon } from "ionicons/components/ion-icon.js";
 import { chevronForwardOutline } from "ionicons/icons";
+import { IonIcon } from "@ionic/react";
 
 function HomeProjects() {
   return (
@@ -23,8 +25,14 @@ function HomeProjects() {
           <p className="text-[4rem] font-medium uppercase tracking-[0.1em]">
             Web Design
           </p>
-          <p className="mt-8 text-2xl uppercase tracking-[0.25em]">
-            View Projects
+          <p className="flex items-center mt-6">
+            <span className="text-2xl font-medium uppercase tracking-[0.25em]">
+              View Projects
+            </span>
+            <IonIcon
+              icon={chevronForwardOutline}
+              className="text-4xl text-primary stroke-4"
+            />
           </p>
         </div>
       </Link>
@@ -44,8 +52,14 @@ function HomeProjects() {
             <p className="text-[4rem] font-medium uppercase tracking-[0.1em]">
               App Design
             </p>
-            <p className="mt-6 text-2xl uppercase tracking-[0.25em]">
-              View Projects
+            <p className="flex items-center mt-6">
+              <span className="text-2xl font-medium uppercase tracking-[0.25em]">
+                View Projects
+              </span>
+              <IonIcon
+                icon={chevronForwardOutline}
+                className="text-4xl text-primary stroke-4"
+              />
             </p>
           </div>
         </Link>
@@ -64,9 +78,14 @@ function HomeProjects() {
             <p className="text-[4rem] font-medium uppercase tracking-[0.1em]">
               Graphic Design
             </p>
-            <p className="mt-6 text-2xl uppercase tracking-[0.25em]">
-              View Projects
-              {/* <IonIcon icon={chevronForwardOutline} /> */}
+            <p className="flex items-center mt-6">
+              <span className="text-2xl font-medium uppercase tracking-[0.25em]">
+                View Projects
+              </span>
+              <IonIcon
+                icon={chevronForwardOutline}
+                className="text-4xl text-primary stroke-4"
+              />
             </p>
           </div>
         </Link>

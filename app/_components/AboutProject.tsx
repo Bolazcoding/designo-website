@@ -2,7 +2,7 @@ import Cta from "./Cta";
 
 function AboutProject() {
   return (
-    <section className="flex items-center justify-between bg-primary mt-60 mx-[6rem] px-16 py-23 rounded-2xl">
+    <section className="flex items-center justify-between bg-primary mt-60 mb-60 mx-[6rem] px-16 py-23 rounded-2xl">
       <div className="flex flex-col">
         <h2 className="text-white text-[4rem] font-medium leading-16">
           Let&apos;s talk about <br /> your project

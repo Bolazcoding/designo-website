@@ -11,13 +11,13 @@ function Navigation() {
 
       <nav>
         <ul className="flex items-center gap-16">
-          <li className="text-[#333136] text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
+          <li className="text-secondary text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
             <Link href="/about">Our Company</Link>
           </li>
-          <li className="text-[#333136] text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
+          <li className="text-secondary text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
             <Link href="/location">Locations</Link>
           </li>
-          <li className="text-[#333136] text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
+          <li className="text-secondary text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
