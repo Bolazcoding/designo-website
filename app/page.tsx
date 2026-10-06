@@ -10,8 +10,6 @@ function page() {
       <HomeHero />
       <HomeProjects />
       <HomeFeatures />
-      <AboutProject />
-      <Footer />
     </>
   );
 }
