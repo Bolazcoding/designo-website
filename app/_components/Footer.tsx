@@ -2,19 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/logo-light.png";
 import {
-  FaFacebookF,
   FaFacebookSquare,
   FaInstagram,
   FaPinterest,
   FaTwitter,
-  FaYoutube,
-  FaYoutubeSquare,
 } from "react-icons/fa";
-import { FaFacebook, FaSquareYoutube } from "react-icons/fa6";
+import { FaSquareYoutube } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <footer className="bg-black/90 py-23">
+    <footer className="bg-black/90 pt-56 py-23">
       <div className="mx-[6rem]">
         <div className="flex items-center justify-between">
           <Link href="/">

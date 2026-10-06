@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "@/app/_styles/globals.css";
 import Navigation from "@/app/_components/Navigation";
+import AboutProject from "./_components/AboutProject";
+import Footer from "./_components/Footer";
 
 const jost = Jost({ subsets: ["latin"], display: "swap" });
 
@@ -16,6 +18,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className={`${jost.className}`}>
         <Navigation />
         <main className="">{children}</main>
+        <AboutProject />
+        <Footer />
       </body>
     </html>
   );

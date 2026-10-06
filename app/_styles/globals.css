@@ -7,11 +7,13 @@ html {
 :root {
   --color-primary: #e7816b;
   --color-secondary: #333136;
+  --color-tertiary: #e7826b69;
 }
 
 @theme {
   --color-primary: #e7816b;
   --color-secondary: #333136;
+  --color-tertiary: #e7826b69;
 }
 
 .loader {
