@@ -6,7 +6,7 @@ import Cta from "./Cta";
 
 function AboutLocation() {
   return (
-    <section className="flex justify-between mt-60 mx-[16rem]">
+    <section className="flex justify-between mt-60 mb-60 mx-[16rem]">
       <div className="text-center">
         <Image src={CanadaDesign} alt="Canada Design" quality={100} />
         <p className="text-secondary text-[2.1rem] font-medium tracking-[0.2em] uppercase mt-12">
