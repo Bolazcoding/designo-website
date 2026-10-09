@@ -9,17 +9,16 @@ type ProjectBoxProps = {
 
 function ProjectBox({ data }: { data: ProjectBoxProps }) {
   return (
-    <section className="grid grid-cols-3 gap-6">
-      {data.map((project, index) => {
+    <section className="grid grid-cols-3 gap-12 mx-[6rem] mt-60">
+      {data.map((project, index) => (
         <div key={index}>
           <ProjectCard
             title={project.title}
             description={project.description}
             image={project.image}
           />
-          ;
-        </div>;
-      })}
+        </div>
+      ))}
     </section>
   );
 }
