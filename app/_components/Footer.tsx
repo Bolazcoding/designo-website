@@ -11,10 +11,10 @@ import { FaSquareYoutube } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <footer className="bg-black/90 pt-56 py-23">
-      <div className="mx-[6rem]">
-        <div className="flex items-center justify-between">
-          <Link href="/">
+    <footer className="bg-black/90 px-6 pb-12 pt-32 sm:px-10 md:px-12 md:pb-16 md:pt-40 lg:pt-48">
+      <div className="mx-auto w-full max-w-[111rem]">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
+          <Link href="/" aria-label="Designo home">
             <Image
               src={Logo}
               alt="Logo"
@@ -24,25 +24,25 @@ function Footer() {
             />
           </Link>
 
-          <nav>
-            <ul className="flex items-center gap-16">
-              <li className="text-white text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
+          <nav aria-label="Footer navigation">
+            <ul className="flex items-center gap-6 sm:gap-10 md:gap-8 lg:gap-12">
+              <li className="text-[1.2rem] uppercase leading-[100%] tracking-[0.15em] text-white transition-all duration-200 hover:underline sm:text-[1.4rem]">
                 <Link href="/about">Our Company</Link>
               </li>
-              <li className="text-white text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
+              <li className="text-[1.2rem] uppercase leading-[100%] tracking-[0.15em] text-white transition-all duration-200 hover:underline sm:text-[1.4rem]">
                 <Link href="/location">Locations</Link>
               </li>
-              <li className="text-white text-2xl uppercase tracking-widest leading-[100%] transition-all duration-200 hover:underline">
+              <li className="text-[1.2rem] uppercase leading-[100%] tracking-[0.15em] text-white transition-all duration-200 hover:underline sm:text-[1.4rem]">
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </nav>
         </div>
-        <div className="border-[0.5px] border-b-[#555] mt-14"></div>
+        <div className="mt-8 border-b border-[#555] md:mt-12"></div>
 
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-60">
-            <div className="mt-10">
+        <div className="flex flex-col items-center gap-8 pt-8 text-center md:flex-row md:items-start md:justify-between md:pt-10 md:text-left">
+          <div className="flex flex-col gap-8 md:flex-row md:gap-16 lg:gap-32">
+            <div>
               <p className="text-white text-[1.8rem] font-semibold">
                 Designo Central Office
               </p>
@@ -51,7 +51,7 @@ function Footer() {
                 Toronto, Ontario M9C 3J5
               </p>
             </div>
-            <div className="mt-10">
+            <div>
               <p className="text-white text-[1.8rem] font-semibold">
                 Contact Us (Central Office):
               </p>
@@ -60,7 +60,7 @@ function Footer() {
             </div>
           </div>
           <div
-            className="flex items-center gap-8"
+            className="flex items-center gap-6 md:self-end"
             aria-label="Social media links"
           >
             <button

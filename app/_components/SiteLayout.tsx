@@ -11,11 +11,11 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
   const showAboutProject = pathname !== "/contact";
 
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Navigation />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
       {showAboutProject && <AboutProject />}
       <Footer />
-    </>
+    </div>
   );
 }

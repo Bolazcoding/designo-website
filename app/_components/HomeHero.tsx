@@ -5,36 +5,37 @@ import Cta from "./Cta";
 
 function HomeHero() {
   return (
-    <section className="relative flex items-center justify-between overflow-hidden bg-primary rounded-2xl mt-5 mb-10 mx-[6rem]">
-      <div className="flex-col items-center px-[3.5rem]">
-        <h1 className="max-w-[54rem] text-white text-[4.8rem] leading-20 font-medium">
+    <section className="relative isolate mt-2 flex min-h-[73rem] w-full flex-col items-center overflow-hidden rounded-2xl bg-primary px-6 pb-[34rem] pt-16 text-center sm:px-12 md:mt-5 md:mb-10 md:min-h-[60rem] md:flex-row md:items-center md:justify-between md:px-16 md:pb-0 md:pt-0 md:text-left lg:min-h-[64rem] lg:px-24">
+      <div className="relative z-10 w-full max-w-[55rem] md:w-[58%]">
+        <h1 className="mx-auto max-w-[54rem] text-[3.6rem] font-medium leading-[1.15] text-white sm:text-[4.6rem] md:mx-0 lg:text-[5.2rem]">
           Award-winning custom designs and digital branding solutions
         </h1>
-        <p className="max-w-[44.5rem] text-white text-[1.6rem] mt-4">
+        <p className="mx-auto mt-6 max-w-[44.5rem] text-[1.6rem] leading-relaxed text-white md:mx-0">
           With over 10 years in the industry, we are experienced in creating
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <Cta className="mt-15" bgColor="white" ctaColor="secondary" linkTo="/">
+        <Cta className="mt-10 md:mt-12" bgColor="white" ctaColor="secondary" linkTo="/web-design">
           Learn More
         </Cta>
       </div>
-      <picture className="flex translate-x-[calc(50%_-_320px)] items-center justify-center">
+      <picture className="absolute -bottom-[12rem] left-1/2 z-0 flex w-[34rem] -translate-x-1/2 justify-center md:bottom-[-24rem] md:left-auto md:right-[-3rem] md:w-[52%] md:translate-x-0 lg:right-[-2rem] lg:w-[54rem]">
         <Image
           src={HeroPhone}
-          alt="hero phone"
+          alt="A smartphone displaying the Designo mobile website"
           quality={100}
-          className="mb-[-25rem]"
-          height="840"
+          className="h-auto w-full"
+          sizes="(max-width: 767px) 34rem, (max-width: 1023px) 52vw, 54rem"
           placeholder="blur"
         />
       </picture>
 
       <Image
         src={BgPattern}
-        alt="Bg Pattern"
+        alt=""
+        aria-hidden="true"
         quality={100}
-        className="absolute right-0 top-0 "
+        className="pointer-events-none absolute -right-[24rem] top-1/2 z-0 h-auto w-[75rem] -translate-y-1/2 opacity-70 md:right-[-20rem] md:w-[90rem]"
       />
     </section>
   );

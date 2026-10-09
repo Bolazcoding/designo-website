@@ -2,14 +2,14 @@ import Cta from "./Cta";
 
 function AboutProject() {
   return (
-    <section className="relative z-10 -mb-[9rem] flex items-center justify-between bg-primary mt-60 mx-[6rem] px-16 py-23 rounded-3xl">
+    <section className="relative z-10 mx-6 -mb-24 mt-24 flex flex-col items-center justify-between gap-8 rounded-3xl bg-primary px-8 py-12 text-center sm:mx-10 md:mx-auto md:mb-[-9rem] md:mt-32 md:max-w-[111rem] md:flex-row md:px-16 md:py-20 md:text-left lg:mx-[6rem] lg:mt-60 lg:max-w-none lg:px-16 lg:py-23">
       <div className="flex flex-col">
-        <h2 className="text-white text-[4rem] font-medium leading-16">
-          Let&apos;s talk about <br /> your project
+        <h2 className="text-[3.2rem] font-medium leading-tight text-white md:text-[4rem]">
+          Let&apos;s talk about your project
         </h2>
-        <p className="text-white text-[1.5rem] font-normal mt-6 leading-9">
+        <p className="mt-5 max-w-[48rem] text-[1.5rem] font-normal leading-relaxed text-white md:mt-6">
           Ready to take it to the next level? Contact us today and find out how{" "}
-          <br /> our expertise can help your business grow.
+          our expertise can help your business grow.
         </p>
       </div>
 
