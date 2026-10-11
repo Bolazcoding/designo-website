@@ -1,4 +1,3 @@
-"use client";
 import ProjectCard from "./ProjectCard";
 
 type ProjectBoxProps = {
@@ -13,7 +12,7 @@ type ProjectBoxProps = {
 
 function ProjectBox({ data }: { data: ProjectBoxProps[] }) {
   return (
-    <section className="grid grid-cols-3 gap-12 mx-[6rem] mt-60">
+    <section className="mt-16 grid mx-[6rem] flex-col overflow-hidden max-md:w-full max-md:max-w-[111rem] max-md:mx-auto grid-cols-1 gap-12 px-6 sm:px-10 md:mt-24 md:grid-cols-2 lg:mt-28 lg:grid-cols-3 lg:px-0">
       {data.map((project, index) => (
         <div key={index}>
           <ProjectCard

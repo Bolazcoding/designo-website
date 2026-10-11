@@ -4,14 +4,14 @@ type HeroTexrProps = {
 };
 function HeroBanner({ title, description }: HeroTexrProps) {
   return (
-    <div className="bg-primary flex flex-col items-center justify-center py-28 mx-[6rem] rounded-3xl">
-      <h1 className="max-w-[54rem] text-white text-[4.8rem] leading-20 font-medium">
+    <section className="flex mx-[6rem] flex-col overflow-hidden max-md:w-full max-md:max-w-[111rem] max-md:mx-auto items-center justify-center bg-primary px-6 py-16 text-center sm:rounded-2xl sm:px-12 sm:py-20 md:py-24">
+      <h1 className="text-[3.2rem] font-medium leading-tight text-white sm:text-[4.8rem]">
         {title}
       </h1>
-      <p className="max-w-[40.5rem] text-white text-[1.6rem] text-center mt-8">
+      <p className="mt-5 max-w-[40.5rem] text-[1.6rem] leading-relaxed text-white sm:mt-6 sm:text-[1.8rem]">
         {description}
       </p>
-    </div>
+    </section>
   );
 }
 
