@@ -2,10 +2,12 @@ import Image from "next/image";
 import PassionImage from "@/public/home/desktop/illustration-passionate.svg";
 import ResourceImage from "@/public/home/desktop/illustration-resourceful.svg";
 import FriendlyImage from "@/public/home/desktop/illustration-friendly.svg";
+import MotionReveal from "./MotionReveal";
 
 function HomeFeatures() {
   return (
     <section className="mt-24 grid grid-cols-1 gap-12 md:mx-[3rem] md:mt-32 md:gap-8 lg:mt-60 lg:grid-cols-3">
+      <MotionReveal>
       <article className="flex flex-col items-center text-center md:flex-row md:gap-12 md:text-left lg:flex-col lg:gap-0 lg:text-center">
         <Image
           className="size-45 lg:size-65 shrink-0"
@@ -24,6 +26,8 @@ function HomeFeatures() {
           </p>
         </div>
       </article>
+      </MotionReveal>
+      <MotionReveal delay={0.1}>
       <article className="flex flex-col items-center text-center md:flex-row md:gap-12 md:text-left lg:flex-col lg:gap-0 lg:text-center">
         <Image
           className="size-45 lg:size-65 shrink-0"
@@ -42,6 +46,8 @@ function HomeFeatures() {
           </p>
         </div>
       </article>
+      </MotionReveal>
+      <MotionReveal delay={0.2}>
       <article className="flex flex-col items-center text-center md:flex-row md:gap-12 md:text-left lg:flex-col lg:gap-0 lg:text-center">
         <Image
           className="size-45 lg:size-65 shrink-0"
@@ -60,6 +66,7 @@ function HomeFeatures() {
           </p>
         </div>
       </article>
+      </MotionReveal>
     </section>
   );
 }

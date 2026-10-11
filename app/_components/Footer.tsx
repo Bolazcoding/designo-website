@@ -8,10 +8,17 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { FaSquareYoutube } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <footer className="bg-black/90 px-6 pb-12 pt-50 sm:px-10 md:px-12 md:pb-16 md:pt-70">
+    <motion.footer
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.05 }}
+      transition={{ duration: 1.65, ease: [0.22, 1, 0.36, 1] }}
+      className="bg-black/90 px-6 pb-12 pt-50 sm:px-10 md:px-12 md:pb-16 md:pt-70"
+    >
       <div className="mx-auto w-full max-w-[123rem]">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <Link href="/" aria-label="Designo home">
@@ -101,7 +108,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 

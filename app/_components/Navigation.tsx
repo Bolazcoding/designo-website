@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Logo from "@/public/logo-dark.png";
+import { motion } from "framer-motion";
 
 const links = [
   { href: "/about", label: "Our Company" },
@@ -15,7 +16,12 @@ function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative z-20 flex w-full items-center justify-between bg-white px-6 py-14 sm:px-10 md:py-16 lg:px-[6rem] lg:py-[6.4rem]">
+    <motion.header
+      initial={{ opacity: 0, y: -16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+      className="relative z-20 flex w-full items-center justify-between bg-white px-6 py-14 sm:px-10 md:py-16 lg:px-[6rem] lg:py-[6.4rem]"
+    >
       <Link href="/" aria-label="Designo home" onClick={() => setIsOpen(false)}>
         <Image src={Logo} alt="Designo" width="196" height="24" quality={100} />
       </Link>
@@ -60,7 +66,7 @@ function Navigation() {
           ))}
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

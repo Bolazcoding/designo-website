@@ -13,13 +13,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { chevronForwardOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
+import MotionReveal from "./MotionReveal";
 
 function HomeProjects() {
   return (
     <section className="mt-24 grid grid-cols-1 gap-6 md:mx-[10rem] md:mt-32 lg:mt-60 lg:grid-cols-2 lg:grid-rows-[repeat(2,30rem)] lg:gap-8">
+      <MotionReveal className="lg:row-span-2" delay={0}>
       <Link
         href="/web-design"
-        className="group relative block h-[25rem] overflow-hidden rounded-2xl md:h-[20rem] lg:row-span-2 lg:h-full"
+        className="group relative block h-[25rem] overflow-hidden rounded-2xl md:h-[20rem] lg:h-full"
       >
         <picture className="absolute inset-0">
           <source media="(max-width: 767px)" srcSet={WebDesignMobile.src} />
@@ -48,7 +50,9 @@ function HomeProjects() {
           </p>
         </div>
       </Link>
+      </MotionReveal>
 
+      <MotionReveal delay={0.08}>
       <Link
         href="/app-design"
         className="group relative block h-[25rem] overflow-hidden rounded-2xl md:h-[20rem] lg:h-full"
@@ -80,7 +84,9 @@ function HomeProjects() {
           </p>
         </div>
       </Link>
+      </MotionReveal>
 
+      <MotionReveal delay={0.16}>
       <Link
         href="/graphic-design"
         className="group relative block h-[25rem] overflow-hidden rounded-2xl md:h-[20rem] lg:h-full"
@@ -115,6 +121,7 @@ function HomeProjects() {
           </p>
         </div>
       </Link>
+      </MotionReveal>
     </section>
   );
 }
