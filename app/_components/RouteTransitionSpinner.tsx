@@ -1,21 +1,39 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-const DISPLAY_DURATION = 700;
+const SHOW_DELAY = 200;
+const SAFETY_TIMEOUT = 10_000;
 
 export default function RouteTransitionSpinner() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lastPathnameRef = useRef(pathname);
+  const pendingRef = useRef(false);
+  const showTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const safetyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const showSpinner = () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-      setIsVisible(true);
-      timerRef.current = setTimeout(() => {
+    const clearTimers = () => {
+      if (showTimerRef.current) clearTimeout(showTimerRef.current);
+      if (safetyTimerRef.current) clearTimeout(safetyTimerRef.current);
+      showTimerRef.current = null;
+      safetyTimerRef.current = null;
+    };
+
+    const beginNavigation = () => {
+      clearTimers();
+      pendingRef.current = true;
+      showTimerRef.current = setTimeout(() => {
+        if (pendingRef.current) setIsVisible(true);
+        showTimerRef.current = null;
+      }, SHOW_DELAY);
+      safetyTimerRef.current = setTimeout(() => {
+        pendingRef.current = false;
         setIsVisible(false);
-        timerRef.current = null;
-      }, DISPLAY_DURATION);
+        clearTimers();
+      }, SAFETY_TIMEOUT);
     };
 
     const handleLinkClick = (event: MouseEvent) => {
@@ -38,24 +56,43 @@ export default function RouteTransitionSpinner() {
       const destination = new URL(link.href, window.location.href);
       if (
         destination.origin !== window.location.origin ||
-        (destination.pathname === window.location.pathname &&
-          destination.search === window.location.search)
+        destination.pathname === window.location.pathname
       ) {
         return;
       }
 
-      showSpinner();
+      beginNavigation();
+    };
+
+    const handleHistoryNavigation = () => {
+      if (window.location.pathname !== lastPathnameRef.current) {
+        beginNavigation();
+      }
     };
 
     document.addEventListener("click", handleLinkClick, true);
-    window.addEventListener("popstate", showSpinner);
+    window.addEventListener("popstate", handleHistoryNavigation);
 
     return () => {
       document.removeEventListener("click", handleLinkClick, true);
-      window.removeEventListener("popstate", showSpinner);
-      if (timerRef.current) clearTimeout(timerRef.current);
+      window.removeEventListener("popstate", handleHistoryNavigation);
+      clearTimers();
     };
   }, []);
+
+  useEffect(() => {
+    if (lastPathnameRef.current === pathname) return;
+
+    lastPathnameRef.current = pathname;
+    if (!pendingRef.current) return;
+
+    pendingRef.current = false;
+    if (showTimerRef.current) clearTimeout(showTimerRef.current);
+    if (safetyTimerRef.current) clearTimeout(safetyTimerRef.current);
+    showTimerRef.current = null;
+    safetyTimerRef.current = null;
+    setIsVisible(false);
+  }, [pathname]);
 
   if (!isVisible) return null;
 
