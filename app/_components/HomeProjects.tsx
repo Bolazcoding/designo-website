@@ -16,7 +16,7 @@ import { IonIcon } from "@ionic/react";
 
 function HomeProjects() {
   return (
-    <section className="mt-24 grid grid-cols-1 gap-6 md:mt-32 lg:mt-60 lg:grid-cols-2 lg:grid-rows-[repeat(2,30rem)] lg:gap-8">
+    <section className="mt-24 grid grid-cols-1 gap-6 md:mx-[10rem] md:mt-32 lg:mt-60 lg:grid-cols-2 lg:grid-rows-[repeat(2,30rem)] lg:gap-8">
       <Link
         href="/web-design"
         className="group relative block h-[25rem] overflow-hidden rounded-2xl md:h-[20rem] lg:row-span-2 lg:h-full"
@@ -87,7 +87,10 @@ function HomeProjects() {
       >
         <picture className="absolute inset-0">
           <source media="(max-width: 767px)" srcSet={GraphicDesignMobile.src} />
-          <source media="(max-width: 1023px)" srcSet={GraphicDesignTablet.src} />
+          <source
+            media="(max-width: 1023px)"
+            srcSet={GraphicDesignTablet.src}
+          />
           <Image
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             fill
