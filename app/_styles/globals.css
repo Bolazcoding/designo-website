@@ -75,3 +75,16 @@ html {
 .com-container {
   @apply mx-auto w-full max-w-[950px] max-[1250px]:max-w-[950px] px-6 sm:px-10 lg:px-12 xl:px-0;
 }
+
+.route-progress-sweep {
+  animation: route-sweep 1.4s ease-in-out infinite;
+}
+
+@keyframes route-sweep {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(260%);
+  }
+}

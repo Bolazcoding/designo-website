@@ -6,6 +6,7 @@ import AboutProject from "./AboutProject";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
 import { MotionConfig, motion } from "framer-motion";
+import RouteTransitionSpinner from "./RouteTransitionSpinner";
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -14,6 +15,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <MotionConfig reducedMotion="user">
       <div className="flex min-h-screen flex-col">
+        <RouteTransitionSpinner />
         <Navigation />
         <motion.main
           key={pathname}
