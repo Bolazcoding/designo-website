@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const DISPLAY_DURATION = 1000;
+const DISPLAY_DURATION = 700;
 
 export default function RouteTransitionSpinner() {
   const [isVisible, setIsVisible] = useState(false);
