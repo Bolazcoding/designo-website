@@ -7,7 +7,11 @@ type ProjectBoxProps = {
   image: string;
 };
 
-function ProjectBox({ data }: { data: ProjectBoxProps }) {
+// type ProjectBoxData = {
+// data: ProjectBoxProps[];
+// };
+
+function ProjectBox({ data }: { data: ProjectBoxProps[] }) {
   return (
     <section className="grid grid-cols-3 gap-12 mx-[6rem] mt-60">
       {data.map((project, index) => (
