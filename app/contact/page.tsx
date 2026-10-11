@@ -3,7 +3,7 @@ import AboutLocation from "../_components/AboutLocation";
 import SubmitContact from "../_components/SubmitContact";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "Contact Us",
 };
 
 function page() {

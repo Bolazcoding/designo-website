@@ -106,10 +106,14 @@ function ContactForm() {
   };
 
   return (
-    <form className="flex flex-col" onSubmit={handleSubmit} noValidate>
+    <form
+      className="flex w-full min-w-0 flex-col"
+      onSubmit={handleSubmit}
+      noValidate
+    >
       <div>
         <input
-          className={`w-[550px] text-[1.7rem] text-white pl-4 py-5 ${
+          className={`w-full min-w-0 bg-transparent px-4 py-4 text-[1.6rem] text-white placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/80 ${
             hasSubmitted && errors.name
               ? "border-b-[1px] border-[#ffb8b8]"
               : "border-b-[0.5px] border-b-[#fff]"
@@ -130,7 +134,7 @@ function ContactForm() {
 
       <div className="mt-8">
         <input
-          className={`w-[550px] text-[1.6rem] text-white pl-4 py-5 ${
+          className={`w-full min-w-0 bg-transparent px-4 py-4 text-[1.6rem] text-white placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/80 ${
             hasSubmitted && errors.email
               ? "border-b-[1px] border-[#ffb8b8]"
               : "border-b-[0.5px] border-b-[#fff]"
@@ -151,7 +155,7 @@ function ContactForm() {
 
       <div className="mt-8">
         <input
-          className={`w-[550px] text-[1.6rem] text-white pl-4 py-5 ${
+          className={`w-full min-w-0 bg-transparent px-4 py-4 text-[1.6rem] text-white placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/80 ${
             hasSubmitted && errors.phone
               ? "border-b-[1px] border-[#ffb8b8]"
               : "border-b-[0.5px] border-b-[#fff]"
@@ -172,7 +176,7 @@ function ContactForm() {
 
       <div className="mt-8">
         <textarea
-          className={`w-[550px] text-[1.6rem] text-white pl-4 pt-5 pb-24 ${
+          className={`w-full min-w-0 resize-y bg-transparent px-4 py-4 text-[1.6rem] text-white placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/80 ${
             hasSubmitted && errors.message
               ? "border-b-[1px] border-[#ffb8b8]"
               : "border-b-[0.5px] border-b-[#fff]"
@@ -197,7 +201,7 @@ function ContactForm() {
         </p>
       ) : null}
 
-      <button className="self-end bg-white text-[1.45rem] text-secondary font-medium tracking-widest uppercase mt-10 py-6.5 px-20 rounded-[0.85rem] cursor-pointer">
+      <button className="mt-8 w-full cursor-pointer rounded-[0.85rem] bg-white px-10 py-6 text-[1.45rem] font-medium uppercase tracking-widest text-secondary transition-colors hover:bg-secondary hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:mt-10 sm:w-auto sm:self-end sm:px-20">
         Submit
       </button>
     </form>
