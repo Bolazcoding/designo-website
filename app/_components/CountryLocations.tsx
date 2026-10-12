@@ -5,6 +5,7 @@ import UKMap from "@/public/locations/desktop/image-map-united-kingdom.png";
 import CanadaTabletMap from "@/public/locations/tablet/image-map-canada.png";
 import AustraliaTabletMap from "@/public/locations/tablet/image-map-australia.png";
 import UKTabletMap from "@/public/locations/tablet/image-map-uk.png";
+import MotionReveal from "./MotionReveal";
 
 type CountryLocationData = {
   country: string;
@@ -102,11 +103,9 @@ function CountryLocations() {
   return (
     <section className="flex mx-[6rem] flex-col overflow-hidde max-md:w-full max-md:max-w-[111rem] max-md:mx-auto gap-12 px-6 py-10 sm:px-10 sm:py-16 lg:px-0 lg:py-0">
       {locations.map((location, index) => (
-        <CountryLocation
-          key={location.country}
-          location={location}
-          reverse={index === 1}
-        />
+        <MotionReveal key={location.country} delay={index * 0.12}>
+          <CountryLocation location={location} reverse={index === 1} />
+        </MotionReveal>
       ))}
     </section>
   );
