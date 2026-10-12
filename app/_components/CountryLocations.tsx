@@ -70,14 +70,14 @@ function CountryLocation({
       <picture className="order-1 block w-full lg:order-2 lg:w-[35rem] lg:shrink-0">
         <source media="(max-width: 1023px)" srcSet={location.tabletMap.src} />
         <Image
-          className="h-full w-full rounded-2xl object-cover"
+          className="h-full w-full object-cover max-lg:rounded-t-2xl lg:rounded-2xl"
           src={location.map}
           alt={`${location.country} office location map`}
           quality={100}
           sizes="(max-width: 1023px) 100vw, 35rem"
         />
       </picture>
-      <div className=" bg-[#fdf3f0] order-2 flex-1 px-6 py-12 text-center rounded-2xl sm:px-12 sm:py-16 sm:text-left lg:order-1 lg:flex lg:flex-col lg:justify-center lg:px-20 lg:py-20">
+      <div className=" bg-[#fdf3f0] order-2 flex-1 px-6 py-12 text-center max-lg:rounded-b-2xl sm:px-12 sm:py-16 sm:text-left lg:rounded-2xl lg:order-1 lg:flex lg:flex-col lg:justify-center lg:px-20 lg:py-20">
         <h2 className="text-[3.2rem] font-medium text-primary sm:text-[3.8rem]">
           {location.country}
         </h2>
