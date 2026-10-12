@@ -2,6 +2,7 @@ import HeroBanner from "../_components/HeroBanner";
 import ProjectBox from "../_components/ProjectBox";
 import { appDesignData } from "@/app/data/data";
 import MotionReveal from "../_components/MotionReveal";
+import OtherDesignLinks from "../_components/OtherDesignLinks";
 
 function page() {
   return (
@@ -13,6 +14,7 @@ function page() {
         />
       </MotionReveal>
       <ProjectBox data={appDesignData} animateItems />
+      <OtherDesignLinks current="app-design" />
     </>
   );
 }
