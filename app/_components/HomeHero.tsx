@@ -15,7 +15,12 @@ function HomeHero() {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <Cta className="mt-10 md:mt-12" bgColor="white" ctaColor="secondary" linkTo="/web-design">
+        <Cta
+          className="mt-10 md:mt-12"
+          bgColor="white"
+          ctaColor="secondary"
+          linkTo="/web-design"
+        >
           Learn More
         </Cta>
       </div>
